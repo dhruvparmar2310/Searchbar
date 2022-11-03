@@ -53,14 +53,22 @@ export default function SearchBar () {
       const delay = setTimeout(() => {
         setTempData(data.filter((value) => {
           if (carData === '') {
-            return value
+            return tempData
           } else if (value.brand.toLowerCase().includes(carData)) {
             return value
           } else { return null }
         }))
-        setCounter(counter + 1)
+        setInterval(() => setCounter(counter + 1), 5000)
       }, 5000)
       return () => { clearTimeout(delay) }
+    } else {
+      setTempData(data.filter((value) => {
+        if (carData === '') {
+          return tempData
+        } else if (value.brand.toLowerCase().includes(carData)) {
+          return value
+        } else { return null }
+      }))
     }
   }, [carData])
 
