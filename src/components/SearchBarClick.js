@@ -47,7 +47,7 @@ export default function SearchBarClick () {
     setCarData(e.target.value)
   }
 
-  const handleSearch = (e) => {
+  const handleClick = (e) => {
     // console.log(data)
     setTempData(data.filter((value) => {
       if (carData === '') {
@@ -64,7 +64,7 @@ export default function SearchBarClick () {
             <div className='main-content container'>
               <label>Search</label>
               <input type="text" value={carData} className='form-control' onChange={(e) => handleChange(e)} placeholder="Search bar" />
-              <button className='btn btn-sm btn-warning' onClick={(e) => handleSearch(e)}>Search</button>
+              <button className='btn btn-sm btn-warning' onClick={(e) => handleClick(e)}>Search</button>
               <div className='carDetails'>
                 <h5 className='mt-5'>Car Brands List :</h5><hr/>
                 {tempData.map((value, index) => {
