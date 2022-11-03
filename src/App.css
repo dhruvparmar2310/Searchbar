@@ -1,0 +1,26 @@
+body{
+  background-color: rgba(0, 255, 242, 0.67) !important;
+}
+
+.main-content{
+  padding: 50px;
+}
+
+.content{
+  padding: 10px;
+  margin: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.797);
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgb(202, 201, 201);
+}
+
+.main-content .form-control{
+  width: 30%;
+}
+
+.main-content label{
+  color: #555;
+  font-style: italic;
+  font-size: 13px;
+  padding: 3px 3px;
+}
